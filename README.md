@@ -51,6 +51,31 @@ We synchronized monthly data using the last business day of each period, combini
 
 ---
 
+## 📊 3. Advanced Exploratory Data Analysis & Statistical Insights
+
+### Detailed Feature Visual Breakdown
+Our second-order polynomial charts (`order=2`) uncovered clear economic forces driving the 3-month future return of the semiconductor sector:
+
+* **VIXCLS vs Return (The Fear Factor):** The curve shows a strong upward trajectory. When market volatility is low (around 15 points), future returns remain stable but flat. However, as the VIX rises toward 20 (systemic market panic), future returns curve sharply upward. This statistically proves the financial rule: market corrections generate the highest mid-term recovery loops.
+* **NASDAQ vs Return (Market Extension):** This relationship displays a concave shape. When the tech market is overstretched and trading at historical highs, the curve bends downward. This indicates that extreme market euphoria limits the upcoming 3-month growth potential for SMH.
+* **FEDFUNDS & CPIAUCSL (Macroeconomic Thresholds):** Both macro indicators present distinct **U-shaped parabolic distributions**. 
+  * For inflation (`CPIAUCSL`), returns reach a bottom near the center and spike at the extremes.
+  * For interest rates (`FEDFUNDS`), we notice a clear threshold effect where returns behave differently once interest rates cross specific percentage boundaries.
+
+---
+
+## 🎯 4. Key Strategic Conclusions (Data-Driven Insights)
+
+1. **The Linear Correlation Illusion:** Traditional linear models would completely fail in this project. For instance, `FEDFUNDS` has a Spearman correlation of **-0.051** (almost zero), and `SMH` scores **0.100**. In a standard linear analysis, an engineer would mistakenly discard these variables. However, the charts prove that their true relationship is parabolic. Because the values drop and rise symmetrically, the linear calculation cancels itself out. This behavior scientifically justifies the mandatory deployment of non-linear algorithms.
+
+2. **Predictive Core Pillars:**
+   The model's predictive power relies heavily on two main pillars: **Market Volatility (VIXCLS: 0.700)** as a leading positive indicator of return accumulation, and **Tech Market Context (NASDAQ: -0.266)** as a macro boundary indicator.
+
+3. **Modeling Next Steps:**
+   Given the parabolic and curved distributions established in this phase, the next stage of the project will focus on training non-linear architectures—specifically **Support Vector Regression (SVR) with an RBF kernel** and **Polynomial Ridge Regression**—to accurately capture these threshold dynamics without overfitting the historical series.
+
+---
+
 ## 🚀 How to Run and Reproduce
 The code notebook is ready to import the data matrix automatically from the repository:
 1. Open `notebooks/RegresionNoLineal.ipynb`.
