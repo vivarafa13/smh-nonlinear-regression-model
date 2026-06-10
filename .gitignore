@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- SageMaker Studio Lab & JupyterLab Extra ---
+.virtual_documents/
+.jupyter/
+.local/
+
+# --- Entornos virtuales de Conda locales ---
+# SageMaker usa Conda. Si creás un entorno dentro de tu carpeta del proyecto, no querés subirlo.
+.conda/
+conda-env/
+
+# --- Credenciales de AWS (CRÍTICO por seguridad) ---
+# Si en algún momento configurás la consola para conectarte a AWS, esto evita que se filtren tus llaves secretas.
+.aws/
+.amazon/
+credentials
